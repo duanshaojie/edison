@@ -1,4 +1,4 @@
-package org.edison.xframe.redis;
+package cn.duanshaojie.redis;
 
 public class RedisLockUtil {
 
