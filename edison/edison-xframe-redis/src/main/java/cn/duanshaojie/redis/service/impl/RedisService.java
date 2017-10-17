@@ -1,4 +1,4 @@
-package cn.duanshaojie.service.impl;
+package cn.duanshaojie.redis.service.impl;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
-import cn.duanshaojie.service.IRedisService;
+import cn.duanshaojie.redis.service.IRedisService;
 
 @Service("redisService")
 public class RedisService implements IRedisService {

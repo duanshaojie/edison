@@ -9,11 +9,19 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>cn.duanshaojie</groupId>
-	<artifactId>edison-xframe-redis</artifactId>
+	<artifactId>edison-xframe-schedul</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>edison-xframe-redis</name>
+	<name>edison-xframe-schedul</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<dependencies>
+		<!-- quartz依赖 - 定时任务 -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+	</dependencies>
 </project>

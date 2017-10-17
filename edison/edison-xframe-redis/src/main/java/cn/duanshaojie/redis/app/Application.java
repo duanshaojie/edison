@@ -1,4 +1,4 @@
-package cn.duanshaojie.application;
+package cn.duanshaojie.redis.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

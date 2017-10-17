@@ -1,4 +1,4 @@
-package cn.duanshaojie.service.impl;
+package cn.duanshaojie.redis.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package cn.duanshaojie.service;
+package cn.duanshaojie.redis.service;
 
 import java.util.List;
 

@@ -13,9 +13,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import cn.duanshaojie.application.Application;
-import cn.duanshaojie.service.IRedisService;
-import cn.duanshaojie.service.impl.RedisLock;
+import cn.duanshaojie.redis.app.Application;
+import cn.duanshaojie.redis.service.IRedisService;
+import cn.duanshaojie.redis.service.impl.RedisLock;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes=Application.class)
@@ -43,26 +43,26 @@ public class RedisJUnitTest {
 	
 	@Test
 	public void test(){
-
-		Thread thread1 = new Thread(){
-			@Override
-			public void run() {
-				lock("thread1");
-			}
-		};
-		Thread thread2 = new Thread(){
-			@Override
-			public void run() {
-				lock("thread2");
-			}
-		};
-		try {
-			thread1.start();
-			thread2.start();
-			latch.await();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//
+//		Thread thread1 = new Thread(){
+//			@Override
+//			public void run() {
+//				lock("thread1");
+//			}
+//		};
+//		Thread thread2 = new Thread(){
+//			@Override
+//			public void run() {
+//				lock("thread2");
+//			}
+//		};
+//		try {
+//			thread1.start();
+//			thread2.start();
+//			latch.await();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	public void lock(String name){
