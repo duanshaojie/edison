@@ -9,6 +9,9 @@
 	<modules>
 		<module>edison-xframe-redis</module>
 		<module>edison-xframe-schedul</module>
+		<module>edison-xframe-wechat</module>
+		<module>edison-xframe-util</module>
+		<module>edison-xframe-web</module>
 	</modules>
 
 	<!-- 继承父包 -->
@@ -58,4 +61,17 @@
 			<version>1.2.23</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
