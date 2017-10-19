@@ -23,10 +23,17 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- 二维码 -->
 		<dependency>
 			<groupId>com.google.zxing</groupId>
 			<artifactId>core</artifactId>
 			<version>3.3.0</version>
+		</dependency>
+		<!-- XML工具类 -->
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 </project>
