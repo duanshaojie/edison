@@ -12,17 +12,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import cn.duanshaojie.util.mail.MailUtils;
 import cn.duanshaojie.util.qcode.QRCodeUtil;
 
 @RestController
 @RequestMapping("test")
 public class JieTestResource {
-
+	private static final Logger logger = LoggerFactory.getLogger(JieTestResource.class);
+	
+	@Autowired
+	private MailUtils mail;
+	
 	@RequestMapping("qrcode")
 	@ResponseBody
 	public void createQRCode(HttpServletRequest request,
@@ -47,6 +55,17 @@ public class JieTestResource {
 			toClient.close();
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	@RequestMapping("sendMail")
+	@ResponseBody
+	public void sendMail(){
+		String address = "1255889018@qq.com";
+		try {
+			mail.sendMali("测试", address, "<html><body><h3>测试成功!</h3></body></html>", null, null);
+		} catch (Exception e) {
+			logger.error("邮件发送错误");
 		}
 	}
 }
