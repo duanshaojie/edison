@@ -68,4 +68,5 @@ public class JieTestResource {
 			logger.error("邮件发送错误");
 		}
 	}
+	
 }
