@@ -51,7 +51,7 @@
 			<artifactId>javax.mail</artifactId>
 			<version>1.5.4</version>
 		</dependency>
-		
+
 		<!-- 下载excel -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -62,6 +62,19 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.9</version>
+		</dependency>
+
+		<!-- freemarker 模板引擎 此处用来发邮件 -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.23</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>12.0.1</version>
 		</dependency>
 	</dependencies>
 </project>
