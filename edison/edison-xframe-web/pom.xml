@@ -30,5 +30,10 @@
 			<artifactId>edison-xframe-wechat</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>cn.duanshaojie</groupId>
+			<artifactId>edison-xframe-baidu</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
