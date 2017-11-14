@@ -13,6 +13,7 @@
 		<module>edison-xframe-util</module>
 		<module>edison-xframe-web</module>
 		<module>edison-xframe-baidu</module>
+		<module>edison-xframe-openCV</module>
 	</modules>
 
 	<!-- 继承父包 -->
