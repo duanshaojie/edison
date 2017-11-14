@@ -2,6 +2,7 @@ package cn.duanshaojie.baidu.ocr;
 
 import java.util.HashMap;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -21,7 +22,7 @@ public class BaiduOCR {
 	@Value(value="${ocr.secretkey}")
 	private String SECRET_KEY;
 	    
-    public Object getMessage(String path,String bean) throws Exception{
+    public Object getMessage(String path,String bean, JSONArray array) throws Exception{
     	 // 初始化一个AipOcr
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
@@ -38,9 +39,9 @@ public class BaiduOCR {
         options.put("recognize_granularity", "small");//是否定位单字符位置 big:不定位-默认值 ;small:定位
 
         // 调用接口
-        JSONObject res = client.general(path, options);
+        JSONObject res = client.general(path, options);//高精度-accurateGeneral
 
         BaiduOcrRule rule = ApplicationContextUtils.getBean(bean, BaiduOcrRule.class);
-		return rule.getRuleMessage(res);
+		return rule.getRuleMessage(res, array);
     }
 }

@@ -14,7 +14,7 @@ public class GroupPolicyRule implements BaiduOcrRule {
 	private static final Logger logger = LoggerFactory.getLogger(GroupPolicyRule.class);
 	
 	@Override
-	public Object getRuleMessage(JSONObject obj) {
+	public Object getRuleMessage(JSONObject obj, Object array) {
 		logger.info("BaiduOcrRule --> GroupPolicyRule-->begin");
 		JSONObject result = new JSONObject();
 		JSONArray words = (JSONArray) obj.get("words_result");
@@ -26,7 +26,7 @@ public class GroupPolicyRule implements BaiduOcrRule {
 			String top = location.get("top").toString();
 			String width = location.get("width").toString();
 			String height = location.get("height").toString();
-			if(Integer.valueOf(left)>517&&Integer.valueOf(left)>366
+			if(Integer.valueOf(left)>517&&Integer.valueOf(top)>366
 					&&Integer.valueOf(top)<366+Integer.valueOf(height)
 					&&Integer.valueOf(left)<517+Integer.valueOf(width)){
 				result.put("投保人", value);
@@ -34,5 +34,4 @@ public class GroupPolicyRule implements BaiduOcrRule {
 		}
 		return result;
 	}
-
 }
