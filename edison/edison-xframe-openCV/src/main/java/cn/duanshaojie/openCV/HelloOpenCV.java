@@ -18,6 +18,17 @@ import org.opencv.utils.Converters;
 
 import cn.duanshaojie.openCV.utils.ImageViewer;
 
+/**
+ * <b>类名：</b>HelloOpenCV.java<br>
+ * <p><b>标题：</b>OpenCV 图形透视矫正</p>
+ * <p><b>描述：</b>jar包安装详见下链接</p>
+ * <p><a href='https://www.w3cschool.cn/opencv/opencv-x4yf28vx.html'>W3Cschool OpenCV之java教程</a></p>
+ * @author <font color='blue'>edison_dsj@163.com</font>
+ * @date  2017-11-14 下午
+ * 
+ * 桃之夭夭,灼灼其华
+ */
+
 public class HelloOpenCV {
 	public static void main(String[] args) {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);

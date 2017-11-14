@@ -11,6 +11,16 @@ import com.baidu.aip.ocr.AipOcr;
 import cn.duanshaojie.baidu.service.BaiduOcrRule;
 import cn.duanshaojie.util.context.ApplicationContextUtils;
 
+/**
+ * <b>类名：</b>BaiduOCR.java<br>
+ * <p><b>标题：</b>百度文字识别</p>
+ * <p><b>描述：</b>文字识别，带位置</p>
+ * @author <font color='blue'>edison_dsj@163.com</font>
+ * @date  2017-11 
+ * 
+ * 桃之夭夭,灼灼其华
+ */
+
 @Component
 public class BaiduOCR {
 	@Value(value="${ocr.appid}")
