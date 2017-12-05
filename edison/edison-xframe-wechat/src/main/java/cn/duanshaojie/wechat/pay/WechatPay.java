@@ -11,6 +11,16 @@ import org.slf4j.LoggerFactory;
 import cn.duanshaojie.util.httppost.HttpUtil;
 import cn.duanshaojie.util.xml.XMLUtil;
 
+/**
+ * 
+ * <b>类名：</b>WechatPay.java<br>
+ * <p><b>标题：</b>微信扫码支付1</p>
+ * <p><b>描述：</b>TODO</p>
+ * @author <font color='blue'>edison_dsj@163.com</font>
+ * @date 2017年12月5日
+ *
+ * <p><b>桃之夭夭,灼灼其华</b></p>
+ */
 public class WechatPay {
 	private static final Logger logger = LoggerFactory.getLogger(WechatPay.class);
 	
