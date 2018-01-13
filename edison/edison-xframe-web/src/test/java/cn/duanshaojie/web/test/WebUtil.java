@@ -39,7 +39,7 @@ public class WebUtil {
 		String path = "C:\\Users\\dev\\Desktop\\file.png";
 		JSONObject obj = null;
 		try {
-			obj = (JSONObject)ocr.getMessage(path, "groupPolicyRule");
+			obj = (JSONObject)ocr.getMessage(path, "groupPolicyRule", null);
 		} catch (Exception e) {
 			logger.error("读取错误",e);
 		}
